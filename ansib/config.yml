@@ -1,0 +1,13 @@
+---
+- name: configure EC2 instance
+  hosts: all
+  become: true
+  tasks:
+    - name: copy the script
+      copy:
+        src: auto.sh
+        dest: /tmp/auto.sh
+        mode: "0755"
+
+    - name: run shell script
+      command: /tmp/auto.sh
