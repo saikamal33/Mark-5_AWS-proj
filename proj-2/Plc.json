@@ -1,0 +1,30 @@
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "ListObjectsInBucket",
+            "Effect": "Allow",
+            "Action": ["s3:ListBucket"],
+            "Resource": ["arn:aws:s3:::dev-bucket"]
+        },
+        {
+            "Sid": "AllObjectActions",
+            "Effect": "Allow",
+            "Action": "s3:*Object",
+            "Resource": ["arn:aws:s3:::dev-bucket/*"]
+        },
+	{
+	    "Sid" : "DenyS3objectdelete",
+	    "Effect" : "Deny",
+	    "Action" : [
+		    "s3:DeleteBucket",
+		    "s3:DeleteBucketPolicy",
+		    "s3:DeleteBucketWebsite",
+		    "s3:DeleteObject",
+		    "s3:DeleteObjectVersion"
+	    ],
+	    "Resource": ["arn:aws:s3:::dev-bucket/*"]
+	}
+    ]
+}
+
