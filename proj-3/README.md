@@ -1,4 +1,4 @@
-# Mark-7
+# AWS Proj3 apache web hosting
 ## This is to Launch a website with apache service inside an AWS EC2 instance so we can access it externally.
 
 ![Apache website](https://github.com/saikamal33/Mark-5_AWS-proj/blob/main/proj-3/images/Screenshot%202025-07-23%20152558.png)
