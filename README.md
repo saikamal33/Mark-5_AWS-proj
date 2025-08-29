@@ -17,3 +17,12 @@ No permissions to delete objects in the dev-bucket.
 No permissions to modify the S3 bucket itself, like changing bucket policies or configurations.
 
 The task is to create an IAM policy with the required permissions that can be assigned to the developer group.
+
+## Aws CLI command
+
+To view the aws ec2 instances in table format.
+
+      aws ec2 describe-instances \
+    --query 'Reservations[*].Instances[*].[Tags[?Key==`Name`]|[0].Value, InstanceId, PublicIpAddress, State.Name]' \
+    --output table \
+    --region eu-north-1 
