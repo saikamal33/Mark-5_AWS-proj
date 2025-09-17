@@ -1,4 +1,18 @@
 # Mark-5
+# AWS Concepts
+
+## Permissions Policy 
+
+They define what action a user, group, are role can perform and on which resources. they are of two types
+
+1) **Managed Policies** --> They can be attached to multiple identities. And they can be reused across other roles/users.
+
+      - AWS Managed Policy :--> provided by AWS
+      - Customer managed Policy:--> Created and managed by us
+        
+2) **inline Policies** -->Attached directly to a single identity (e.g., one IAM role), they are tightly coupled to that identity if the identity is deleted, the policy is deleted too.
+Not reusable or shareable across other roles/users
+
 
 ## Project-1
 This project will automate the process of launching an EC2 instance on AWS, configure it using a shell script, and set up the environment using Ansible. You'll use Git for version control and store the code on GitHub.
