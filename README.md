@@ -13,7 +13,7 @@ They define what action a user, group, are role can perform and on which resourc
 2) **inline Policies** -->Attached directly to a single identity (e.g., one IAM role), they are tightly coupled to that identity if the identity is deleted, the policy is deleted too.
 Not reusable or shareable across other roles/users
 
-
+**NOTE** : we can attach inline policies directlry inside of managed policies
 ## Project-1
 This project will automate the process of launching an EC2 instance on AWS, configure it using a shell script, and set up the environment using Ansible. You'll use Git for version control and store the code on GitHub.
 
