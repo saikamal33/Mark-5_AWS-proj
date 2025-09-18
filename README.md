@@ -14,6 +14,21 @@ They define what action a user, group, are role can perform and on which resourc
 Not reusable or shareable across other roles/users
 
 **NOTE** : we can attach inline policies directlry inside of managed policies
+
+## Difference between Client & Resource in boto3:
+
+### Boto3.Client:
+- It is a low-level service client that maps directly to AWS service APIs. It is when we want fine-grained control (or) access to all API features. it gives us access to all AWS service operations.
+
+- The Resource API for s3 exists but is limited compared to client API.
+
+### Boto3.Resource:
+- It is a high level, object oriented API that abstracts many details more python oriented & Easier to use for common tasks. It is used when we want to work with objects directly(tables items) in a more intuitive way.
+
+- Resources like dynamoDBs resource API is rich and let us work directly with table objects, items, etc. it simplifies CRUD operations & Provide high level abstractions & Makes code cleaner.
+
+
+
 ## Project-1
 This project will automate the process of launching an EC2 instance on AWS, configure it using a shell script, and set up the environment using Ansible. You'll use Git for version control and store the code on GitHub.
 
