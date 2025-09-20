@@ -27,8 +27,23 @@ Not reusable or shareable across other roles/users
 
 - Resources like dynamoDBs resource API is rich and let us work directly with table objects, items, etc. it simplifies CRUD operations & Provide high level abstractions & Makes code cleaner.
 
+## Default role for Lambda
+When an lambda funtion is created we need to have a defaule role with a policy so it can execute the given funtion while using other services in AWS.
 
-
+      resource "aws_iam_role" "lambda_role" {
+        name = "lambda_exec_role"
+      
+        assume_role_policy = jsonencode({
+          Version = "2012-10-17",
+          Statement = [{
+            Action    = "sts:AssumeRole"
+            Effect    = "Allow"
+            Principal = {
+              Service = "lambda.amazonaws.com"
+            }
+          }]
+        })
+      }
 ## Project-1
 This project will automate the process of launching an EC2 instance on AWS, configure it using a shell script, and set up the environment using Ansible. You'll use Git for version control and store the code on GitHub.
 
