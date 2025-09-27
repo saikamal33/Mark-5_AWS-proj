@@ -1,5 +1,9 @@
-# Mark-5
-# AWS Concepts
+# Mark-5-AWS Concepts
+
+## AWS CLI concepts
+- To configure our local kubectl tool to connect to our AWS EKS cluster, we can use below command. we need to configure the aws cli with keys to update this.
+
+        aws eks --region <Region> update-kubeconfig --name <name of cluster>
 
 ## Permissions Policy 
 
