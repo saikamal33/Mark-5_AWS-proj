@@ -32,7 +32,7 @@ We can use below steps to install nginx for forward proxy setup
         # this is used to block the specific domain 
 3) we can now restart the nginx and expose the proxy.
 
-       sudo nginx -t
+       sudo nginx -t              #tests the NGINX configuration for syntax errors without actually starting
        sudo systemctl reload nginx
 
         # Exposing the proxy variable
